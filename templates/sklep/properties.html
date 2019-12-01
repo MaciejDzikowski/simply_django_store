@@ -1,0 +1,13 @@
+{% extends "sklep/../base.html" %}
+{% block content %}
+    <h2>Szczegóły</h2>
+    <ul>
+        <li>
+            <h3>{{ product.name }}</h3>
+            <p>Cena: {{ product.price }} zł</p>
+            <p>Autor: {{ product.author }}</p>
+            <p>Opis: {{ product.description }}</p>
+        </li>
+    </ul>
+    <h4><p align="right"><a href="/products"> Wróć do listy produktów </a></p></h4>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "sklep/../base.html" %}
+{% block content %}
+    <h2>Produkty</h2>
+    <ul>
+        {% for p in products %}
+            <li>
+                <h3><a href={{ p.id }}>{{ p.name }}</a></h3>
+                <p>Cena: {{ p.price }} zł</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
