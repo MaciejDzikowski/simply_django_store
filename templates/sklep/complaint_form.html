@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <h2>Złóż reklamację</h2>
+    <form action="/complaint/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Złóż reklamację">
+    </form>
+{% endblock %}

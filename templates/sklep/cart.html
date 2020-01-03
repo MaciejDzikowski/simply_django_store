@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Twój koszyk{% endblock %}
+{% block content %}
+    <style>
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    {% if products %}
+        <ul>
+            {% for key, value in products.items %}
+                <li>
+                    <div>
+                        {{ value }} x {{ key }} ({{ key.price }}zl)
+                        <form action="/cart/add/" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="item_id" value="{{ key.id }}">
+                            <input type="submit" value="+">
+                            <input type="number" name="number" value="0">
+                            <input type="submit" formaction="/cart/remove/" value="-">
+                        </form>
+                        <form action="/cart/remove/" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="item_id" value="{{ key.id }}">
+                            <input type="hidden" name="number" value="{{ value }}">
+                            <input type="submit" value="Usuń z koszyka">
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Koszyk jest pusty</p>
+    {% endif %}
+    <p><a href="/order/">Złóż zamówienie</a></p>
+    <p><a href="/products/">Przejdź do listy produktów</a></p>
+{% endblock %}

@@ -2,12 +2,37 @@
 {% block content %}
     <h2>Szczegóły</h2>
     <ul>
-        <li>
-            <h3>{{ product.name }}</h3>
-            <p>Cena: {{ product.price }} zł</p>
-            <p>Autor: {{ product.author }}</p>
-            <p>Opis: {{ product.description }}</p>
-        </li>
+        <h3>{{ product.name }}</h3>
+        <p>Cena: {{ product.price }} zł</p>
+        <p>Autor: {{ product.author }}</p>
+        <p>Opis: {{ product.description }}</p>
     </ul>
+    <form action="/cart/add/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ product.id }}">
+        <input type="hidden" name="number" value="1">
+        <input type="submit" value="Dodaj do koszyka">
+    </form>
+
+    <h5>Ocena użytkowników: {{ product.get_rating }}</h5>
+
+    <form action="/products/rate/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="hidden" name="item_id" value="{{ product.id }}">
+        <input type="submit" value="Oceń">
+    </form>
     <h4><p align="right"><a href="/products"> Wróć do listy produktów </a></p></h4>
+    <br/>
+    <br/>
+    <br/>
+    <h3>Komentarze</h3>
+    <ul>
+         {% for comment in product.get_comments %}
+            <li>
+                <h4>{{ comment }}</h4>
+                <br/>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

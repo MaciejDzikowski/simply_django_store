@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "sklep/../base.html" %}
+{% block content %}
+    <h2>Wartość zamówienia: {{ price }} zł.</h2>
+    <br/>
+    <h2>Zamówione produkty:</h2>
+    <ul>
+        {% for p, k in names %}
+            <li>
+                <h3>{{ p }} x {{ k }}</h3>
+                <br/>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

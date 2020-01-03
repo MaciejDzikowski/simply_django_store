@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "sklep/../base.html" %}
+{% block content %}
+    <h2>Reklamacja</h2>
+    <br/>
+    <h3>Klient: {{ complaint }}</h3>
+    <br/>
+    <h3>Treść zgłoszenia: {{ complaint.message }}</h3>
+{% endblock %}
