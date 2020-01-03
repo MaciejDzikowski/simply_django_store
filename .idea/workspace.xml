@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c60a373-a83b-4b81-866a-a0d211ba30d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Case Django Maciej Dzikowski.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sklep/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sklep/migrations/0002_remove_rating_product_ratings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sklep/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sklep/complaint_detalis.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sklep/complaint_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sklep/order_detalis.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sklep/order_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/migrations/0002_order.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sklep/properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sklep/properties.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +182,7 @@
       <workItem from="1577569018448" duration="26128000" />
       <workItem from="1577661215158" duration="59000" />
       <workItem from="1577661287670" duration="765000" />
+      <workItem from="1578010563817" duration="588000" />
     </task>
     <servers />
   </component>
